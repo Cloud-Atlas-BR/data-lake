@@ -12,7 +12,7 @@ Resources:
     Properties:
       BucketName: !Ref BucketName
       VersioningConfiguration:
-          Status: String
+          Status: !Ref VersioningStatus
       BucketEncryption:
         ServerSideEncryptionConfiguration: 
           - BucketKeyEnabled: !Ref BucketKeyEnabled
