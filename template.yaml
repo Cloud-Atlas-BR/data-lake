@@ -15,6 +15,5 @@ Resources:
           Status: String
       BucketEncryption:
         ServerSideEncryptionConfiguration: 
-          ServerSideEncryptionRule:
-            -
+          - ServerSideEncryptionRule:
               BucketKeyEnabled: !Ref BucketKeyEnabled
