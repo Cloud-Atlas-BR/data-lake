@@ -16,3 +16,5 @@ Resources:
       BucketEncryption:
         ServerSideEncryptionConfiguration: 
           - BucketKeyEnabled: !Ref BucketKeyEnabled
+            ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
