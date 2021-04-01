@@ -1,6 +1,7 @@
 {
     "Parameters": {
         "BucketName": "cloudatlas-datalake",
-        "BucketKeyEnabled": "true"
+        "BucketKeyEnabled": "true",
+        "VersioningStatus": "Enabled"
     }
 }

@@ -4,12 +4,17 @@ Parameters:
     Type: String
   BucketKeyEnabled:
     Type: String
+  VersioningStatus:
+    Type: String
 Resources:
   S3Bucket:
     Type: "AWS::S3::Bucket"
     Properties:
       BucketName: !Ref BucketName
+      VersioningConfiguration:
+          Status: String
       BucketEncryption:
         ServerSideEncryptionConfiguration: 
           ServerSideEncryptionRule:
+            -
               BucketKeyEnabled: !Ref BucketKeyEnabled
