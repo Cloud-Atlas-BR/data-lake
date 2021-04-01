@@ -1,6 +1,7 @@
-[
-    {
-      "ParameterKey": "BucketName",
-      "ParameterValue": "cloudatlas-data-lake"
+{
+    "Parameters": {
+     
+      "BucketName": "cloudatlas-data-lake"
+     
     }
-  ]
+  }
