@@ -23,3 +23,19 @@ Resources:
         BlockPublicPolicy: True
         IgnorePublicAcls: True
         RestrictPublicBuckets: True
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties: 
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+      Statement:
+        - Effect: Deny
+          Action:
+            - 's3:*'          
+          Resource:
+            - !Sub "arn:aws:s3:::${S3Bucket}"
+            - !Sub "arn:aws:s3:::${S3Bucket}/*"
+          Principal: '*'
+          Condition:
+            Bool:
+              'aws:SecureTransport': "false"
