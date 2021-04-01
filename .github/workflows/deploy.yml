@@ -20,5 +20,5 @@ jobs:
         run: | 
           aws cloudformation deploy \
             --stack-name cloud-atlas-data-lake \
-            --template-file template.yaml
+            --template-file template.yaml \
             --parameter-overrides file://parameters.json
